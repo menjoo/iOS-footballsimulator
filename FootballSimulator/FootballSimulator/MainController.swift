@@ -37,6 +37,13 @@ class MainController: UIViewController {
     
     func settingsTapped() {
         print("settings tapped")
+        performSegue(withIdentifier: "toSettingsSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSettingsSegue" {
+            print("prepare for toSettingsSegue")
+        }
     }
 }
 
