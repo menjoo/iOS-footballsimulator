@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="FootballSimulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IHK-Nr-Xt3">
+                                <rect key="frame" x="-4" y="20" width="383" height="647"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwx-Fm-z6n" customClass="TeamSelector" customModule="FootballSimulator" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="90" width="383" height="150"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7D6-Gg-CHh" customClass="TeamSelector" customModule="FootballSimulator" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="447" width="383" height="150"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-TF-apv">
+                                <rect key="frame" x="94" y="267" width="187.5" height="133"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xio-QN-jyC">
+                                <rect key="frame" x="16" y="611" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <state key="normal" title="START GAME">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHK-Nr-Xt3" secondAttribute="trailing" constant="-20" id="3Ma-GD-qTS"/>
+                            <constraint firstItem="fKY-TF-apv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="7ik-7w-iwZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7D6-Gg-CHh" secondAttribute="trailing" constant="-20" id="EYy-9W-bP3"/>
+                            <constraint firstItem="kwx-Fm-z6n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="FLn-5m-ScS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xio-QN-jyC" secondAttribute="bottom" constant="20" id="Qs3-9c-sku"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xio-QN-jyC" secondAttribute="trailing" id="Sqb-7x-xiy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IHK-Nr-Xt3" secondAttribute="bottom" id="TSc-iM-wxy"/>
+                            <constraint firstItem="IHK-Nr-Xt3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ToA-6j-Wky"/>
+                            <constraint firstItem="kwx-Fm-z6n" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.225" id="X5q-Ka-OJY"/>
+                            <constraint firstItem="fKY-TF-apv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="arR-lz-aKO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7D6-Gg-CHh" secondAttribute="bottom" constant="70" id="c4N-Ny-Maf"/>
+                            <constraint firstItem="IHK-Nr-Xt3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gIL-75-M8f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kwx-Fm-z6n" secondAttribute="trailing" constant="-20" id="iw8-Nn-gU1"/>
+                            <constraint firstItem="7D6-Gg-CHh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.225" id="lHQ-Ai-7OR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xio-QN-jyC" secondAttribute="leading" id="mnS-Ut-OG9"/>
+                            <constraint firstItem="kwx-Fm-z6n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="oir-5c-m7B"/>
+                            <constraint firstItem="fKY-TF-apv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQC-DG-fij"/>
+                            <constraint firstItem="fKY-TF-apv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="uqF-IU-pas"/>
+                            <constraint firstItem="7D6-Gg-CHh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="zcQ-AO-ecG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFA797A51DEF09900007D054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA797A41DEF09900007D054 /* AppDelegate.swift */; };
+		EFA797A71DEF09900007D054 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA797A61DEF09900007D054 /* MainController.swift */; };
+		EFA797AA1DEF09910007D054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA797A81DEF09910007D054 /* Main.storyboard */; };
+		EFA797AC1DEF09910007D054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA797AB1DEF09910007D054 /* Assets.xcassets */; };
+		EFA797AF1DEF09910007D054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA797AD1DEF09910007D054 /* LaunchScreen.storyboard */; };
+		EFA797B81DEF10510007D054 /* TeamSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA797B71DEF10510007D054 /* TeamSelector.swift */; };
+		EFA797C11DEF21E90007D054 /* belgium.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA797BE1DEF21E90007D054 /* belgium.png */; };
+		EFA797C21DEF21E90007D054 /* germany.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA797BF1DEF21E90007D054 /* germany.png */; };
+		EFA797C31DEF21E90007D054 /* netherlands.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA797C01DEF21E90007D054 /* netherlands.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EFA797A11DEF09900007D054 /* FootballSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA797A41DEF09900007D054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFA797A61DEF09900007D054 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		EFA797A91DEF09910007D054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFA797AB1DEF09910007D054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFA797AE1DEF09910007D054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFA797B01DEF09910007D054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA797B71DEF10510007D054 /* TeamSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSelector.swift; sourceTree = "<group>"; };
+		EFA797BE1DEF21E90007D054 /* belgium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = belgium.png; sourceTree = "<group>"; };
+		EFA797BF1DEF21E90007D054 /* germany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = germany.png; sourceTree = "<group>"; };
+		EFA797C01DEF21E90007D054 /* netherlands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = netherlands.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFA7979E1DEF09900007D054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFA797981DEF09900007D054 = {
+			isa = PBXGroup;
+			children = (
+				EFA797A31DEF09900007D054 /* FootballSimulator */,
+				EFA797A21DEF09900007D054 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFA797A21DEF09900007D054 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFA797A11DEF09900007D054 /* FootballSimulator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFA797A31DEF09900007D054 /* FootballSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				EFA797B91DEF1C970007D054 /* Images */,
+				EFA797B61DEF10220007D054 /* CustomViews */,
+				EFA797A41DEF09900007D054 /* AppDelegate.swift */,
+				EFA797A61DEF09900007D054 /* MainController.swift */,
+				EFA797A81DEF09910007D054 /* Main.storyboard */,
+				EFA797AB1DEF09910007D054 /* Assets.xcassets */,
+				EFA797AD1DEF09910007D054 /* LaunchScreen.storyboard */,
+				EFA797B01DEF09910007D054 /* Info.plist */,
+			);
+			path = FootballSimulator;
+			sourceTree = "<group>";
+		};
+		EFA797B61DEF10220007D054 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EFA797B71DEF10510007D054 /* TeamSelector.swift */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		EFA797B91DEF1C970007D054 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EFA797BE1DEF21E90007D054 /* belgium.png */,
+				EFA797BF1DEF21E90007D054 /* germany.png */,
+				EFA797C01DEF21E90007D054 /* netherlands.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFA797A01DEF09900007D054 /* FootballSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFA797B31DEF09910007D054 /* Build configuration list for PBXNativeTarget "FootballSimulator" */;
+			buildPhases = (
+				EFA7979D1DEF09900007D054 /* Sources */,
+				EFA7979E1DEF09900007D054 /* Frameworks */,
+				EFA7979F1DEF09900007D054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootballSimulator;
+			productName = FootballSimulator;
+			productReference = EFA797A11DEF09900007D054 /* FootballSimulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFA797991DEF09900007D054 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Menno Morsink";
+				TargetAttributes = {
+					EFA797A01DEF09900007D054 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EFA7979C1DEF09900007D054 /* Build configuration list for PBXProject "FootballSimulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFA797981DEF09900007D054;
+			productRefGroup = EFA797A21DEF09900007D054 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFA797A01DEF09900007D054 /* FootballSimulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFA7979F1DEF09900007D054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA797AF1DEF09910007D054 /* LaunchScreen.storyboard in Resources */,
+				EFA797C31DEF21E90007D054 /* netherlands.png in Resources */,
+				EFA797AC1DEF09910007D054 /* Assets.xcassets in Resources */,
+				EFA797C21DEF21E90007D054 /* germany.png in Resources */,
+				EFA797AA1DEF09910007D054 /* Main.storyboard in Resources */,
+				EFA797C11DEF21E90007D054 /* belgium.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFA7979D1DEF09900007D054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA797A71DEF09900007D054 /* MainController.swift in Sources */,
+				EFA797A51DEF09900007D054 /* AppDelegate.swift in Sources */,
+				EFA797B81DEF10510007D054 /* TeamSelector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EFA797A81DEF09910007D054 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFA797A91DEF09910007D054 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFA797AD1DEF09910007D054 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFA797AE1DEF09910007D054 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFA797B11DEF09910007D054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFA797B21DEF09910007D054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFA797B41DEF09910007D054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FootballSimulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mennomorsink.FootballSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EFA797B51DEF09910007D054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FootballSimulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mennomorsink.FootballSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFA7979C1DEF09900007D054 /* Build configuration list for PBXProject "FootballSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA797B11DEF09910007D054 /* Debug */,
+				EFA797B21DEF09910007D054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFA797B31DEF09910007D054 /* Build configuration list for PBXNativeTarget "FootballSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA797B41DEF09910007D054 /* Debug */,
+				EFA797B51DEF09910007D054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFA797991DEF09900007D054 /* Project object */;
+}
