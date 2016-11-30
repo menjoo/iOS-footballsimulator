@@ -9,17 +9,34 @@
 import UIKit
 
 class MainController: UIViewController {
+    
+    @IBOutlet weak var btnStart: UIImageView!
+    @IBOutlet weak var btnSettings: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupBtns()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func setupBtns() {
+        let tapStartGesture = UITapGestureRecognizer(target: self, action: #selector(self.startTapped))
+        btnStart.addGestureRecognizer(tapStartGesture)
+        
+        let tapSettingsGesture = UITapGestureRecognizer(target: self, action: #selector(self.settingsTapped))
+        btnSettings.addGestureRecognizer(tapSettingsGesture)
+    }
 
-
+    func startTapped() {
+        print("start tapped")
+    }
+    
+    func settingsTapped() {
+        print("settings tapped")
+    }
 }
 
