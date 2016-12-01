@@ -42,12 +42,13 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
         
         scoreLabel.text = "0 - 0"
         statusLabel.text = "Not started"
+        timeLabel.text = ""
         
         flagIconTeam1.image = team1?.flag
         nameLabelTeam1.text = team1?.fullname.uppercased()
         flagIconTeam2.image = team2?.flag
         nameLabelTeam2.text = team2?.fullname.uppercased()
-        game.startGame(team1!, teamb: team2!, gameMode: .normal)
+        game.startGame(team1!, teamb: team2!, gameMode: .quick)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,24 +85,49 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
     
     func eventDataFor(_ event: EventRow) -> (eventIcon: UIImage?, eventText: String, subtitleText: String) {
         if event.gameEvent == .cornerGivenTeam1 || event.gameEvent == .corderGivenTeam2 {
-            return (eventIcon: UIImage(named: "corner.png"), eventText: "Corner", subtitleText: "")
+            return (eventIcon: UIImage(named: "corner.png"),
+                    eventText: "Corner",
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is taking the kick")
         } else if event.gameEvent == .goalScoredTeam1 || event.gameEvent == .goalScoredTeam2 {
-            return (eventIcon: UIImage(named: "footbal.png"), eventText: "Goaaaaalll!!!", subtitleText: "Insane shot by \(event.playerno)! A goal to remember!")
+            return (eventIcon: UIImage(named: "footbal.png"),
+                    eventText: "Goaaaaalll!!!",
+                    subtitleText: "Insane shot by \(playerNameFor(playerno: event.playerno, from: event.gameEvent))! A goal to remember!")
         } else if event.gameEvent == .playerInjuredTeam1 || event.gameEvent == .playerInjuredTeam2 {
-            return (eventIcon: UIImage(named: "injury.png"), eventText: "Injury", subtitleText: "\(event.playerno) is in serious pain!")
+            return (eventIcon: UIImage(named: "injury.png"),
+                    eventText: "Injury",
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is in serious pain!")
         } else if event.gameEvent == .playerSwitchTeam1 || event.gameEvent == .playerSwitchTeam2 {
-            return (eventIcon: UIImage(named: "sub.png"), eventText: "Substitution", subtitleText: "\(event.playerno) is being subbed")
+            return (eventIcon: UIImage(named: "sub.png"),
+                    eventText: "Substitution",
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is being subbed")
         } else if event.gameEvent == .yellowCardTeam1 || event.gameEvent == .yellowCardTeam2 {
-            return (eventIcon: UIImage(named: "card.png"), eventText: "Yellow card", subtitleText: "\(event.playerno) almost injured his opponent")
+            return (eventIcon: UIImage(named: "card_yellow.png"),
+                    eventText: "Yellow card",
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) almost injured his opponent")
         } else if event.gameEvent == .redCardTeam1 || event.gameEvent == .redCardTeam2 {
-            return (eventIcon: UIImage(named: "card.png"), eventText: "Red card", subtitleText: "\(event.playerno) is off!  Took down his opponent who was clearly in on goal")
+            return (eventIcon: UIImage(named: "card_red.png"),
+                    eventText: "Red card",
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is off!  Took down his opponent who was clearly in on goal")
         } else if event.gameEvent == .violationTeam1 || event.gameEvent == .violationTeam2 {
-            return (eventIcon: nil, eventText: "Foul", subtitleText: "\(event.playerno) with a reckless charge on his opponent! Yellow for him.")
+            return (eventIcon: nil,
+                    eventText: "Foul",
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) with a reckless charge on his opponent! Yellow for him.")
         } else if event.gameEvent == .nearmissTeam1 || event.gameEvent == .nearmissTeam2 {
-            return (eventIcon: nil, eventText: "Miss", subtitleText: "Saved by the keeper! Kept position well and waited for \(event.playerno)'s shot")
+            return (eventIcon: nil,
+                    eventText: "Miss",
+                    subtitleText: "Saved by the keeper! Kept position well and waited for \(playerNameFor(playerno: event.playerno, from: event.gameEvent))'s shot")
         }
         
         return (eventIcon: nil, eventText: "", subtitleText: "")
+    }
+    
+    func playerNameFor(playerno: Int, from event: GamesEvent) -> String? {
+        if "\(event)".contains("1") {
+            return team1?.getPlayerByNumber(playerno)
+        } else if "\(event)".contains("2") {
+            return team2?.getPlayerByNumber(playerno)
+        }
+        return nil
     }
     
     func GameStarted() {
@@ -113,20 +139,30 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
         DispatchQueue.main.sync {
             statusLabel.text = "\(gameState)".capitalized
             
-            switch(gameEvent) {
-            case .goalScoredTeam1:
+            if gameEvent == .goalScoredTeam1 {
                 score.goals1 += 1
-                playSound(sound: "goal", isBackground: false)
-                break
-            case .goalScoredTeam2:
+            } else if gameEvent == .goalScoredTeam2 {
                 score.goals2 += 1
-                playSound(sound: "goal", isBackground: false)
-                break
-            case .timePass:
+            } else if gameEvent == .nearmissTeam1 || gameEvent == .nearmissTeam2 {
+                playSound(sound: "_miss_\(arc4random() % 2)", isBackground: false)
+            } else if gameEvent == .yellowCardTeam1 || gameEvent == .yellowCardTeam2 {
+                playSound(sound: "fluit", isBackground: false)
+                playSound(sound: "_yellow_card", isBackground: false)
+            } else if gameEvent == .redCardTeam1 || gameEvent == .redCardTeam2 {
+                playSound(sound: "fluit", isBackground: false)
+            } else if gameEvent == .timePass {
                 timeLabel.text = "\(time)'"
-                break;
-            default: break
-                //
+                if time == 45 {
+                    playSound(sound: "fluit", isBackground: false, times: 2)
+                }
+                
+                if(arc4random() % 90 == 0) {
+                    playSound(sound: "_call_by_mom", isBackground: false)
+                }
+            }
+            
+            if gameEvent == .goalScoredTeam1 || gameEvent == .goalScoredTeam2 {
+                playSound(sound: "_goal_\(arc4random() % 4)", isBackground: false)
             }
             
             if(gameEvent != .timePass) {
@@ -148,10 +184,11 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
     
     func GameEnded(_ gameResult: GameResult) {
         stopSound()
-        playSound(sound: "fluit", isBackground: false)
+        playSound(sound: "fluit", isBackground: false, times: 3)
     }
     
-    func playSound(sound: String, isBackground: Bool) {
+    func playSound(sound: String, isBackground: Bool, times: Int = 1) {
+        let loops = times - 1
         let url = Bundle.main.url(forResource: sound, withExtension: "mp3")!
         
         do {
@@ -159,11 +196,14 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
                 soundPlayerBg = try AVAudioPlayer(contentsOf: url)
                 guard let soundPlayerBg = soundPlayerBg else { return }
                 soundPlayerBg.prepareToPlay()
+                soundPlayerBg.volume = 0.3
                 soundPlayerBg.play()
             } else {
                 soundPlayer = try AVAudioPlayer(contentsOf: url)
                 guard let soundPlayer = soundPlayer else { return }
                 soundPlayer.prepareToPlay()
+                soundPlayer.volume = 1.0
+                soundPlayer.numberOfLoops = loops
                 soundPlayer.play()
             }
         } catch let error {

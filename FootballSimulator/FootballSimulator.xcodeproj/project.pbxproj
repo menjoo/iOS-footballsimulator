@@ -18,12 +18,7 @@
 		EFA797DF1DF037740007D054 /* TeamSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA797DC1DF037740007D054 /* TeamSelector.swift */; };
 		EFA798531DF037A00007D054 /* ambient.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA7984B1DF037A00007D054 /* ambient.mp3 */; };
 		EFA798541DF037A00007D054 /* fluit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA7984C1DF037A00007D054 /* fluit.mp3 */; };
-		EFA798551DF037A00007D054 /* goal_s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA7984D1DF037A00007D054 /* goal_s.mp3 */; };
-		EFA798561DF037A00007D054 /* goal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA7984E1DF037A00007D054 /* goal.mp3 */; };
-		EFA798571DF037A00007D054 /* goal2_s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA7984F1DF037A00007D054 /* goal2_s.mp3 */; };
-		EFA798581DF037A00007D054 /* goal2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA798501DF037A00007D054 /* goal2.mp3 */; };
-		EFA798591DF037A00007D054 /* nearmiss_s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA798511DF037A00007D054 /* nearmiss_s.mp3 */; };
-		EFA7985A1DF037A00007D054 /* nearmiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA798521DF037A00007D054 /* nearmiss.mp3 */; };
+		EFA798591DF037A00007D054 /* _miss_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFA798511DF037A00007D054 /* _miss_1.mp3 */; };
 		EFA798811DF03B900007D054 /* ara.ico in Resources */ = {isa = PBXBuildFile; fileRef = EFA7985F1DF03B8F0007D054 /* ara.ico */; };
 		EFA798821DF03B900007D054 /* arg.ico in Resources */ = {isa = PBXBuildFile; fileRef = EFA798601DF03B8F0007D054 /* arg.ico */; };
 		EFA798831DF03B900007D054 /* aus.ico in Resources */ = {isa = PBXBuildFile; fileRef = EFA798611DF03B8F0007D054 /* aus.ico */; };
@@ -63,7 +58,6 @@
 		EFA798AB1DF03B9F0007D054 /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798A51DF03B9F0007D054 /* field.png */; };
 		EFA798AC1DF03B9F0007D054 /* fields.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798A61DF03B9F0007D054 /* fields.png */; };
 		EFA798AD1DF03B9F0007D054 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798A71DF03B9F0007D054 /* logo.png */; };
-		EFA798B51DF03BAB0007D054 /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798AF1DF03BAB0007D054 /* card.png */; };
 		EFA798B61DF03BAB0007D054 /* corner.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798B01DF03BAB0007D054 /* corner.png */; };
 		EFA798B71DF03BAB0007D054 /* footbal.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798B11DF03BAB0007D054 /* footbal.png */; };
 		EFA798B81DF03BAB0007D054 /* injury.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798B21DF03BAB0007D054 /* injury.png */; };
@@ -79,9 +73,17 @@
 		EFA798CC1DF046590007D054 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA798CB1DF046590007D054 /* Simulator.swift */; };
 		EFA798CE1DF04E6A0007D054 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA798CD1DF04E6A0007D054 /* EventRow.swift */; };
 		EFB61A7F1DF06C6900CC4E9A /* sierd.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61A7E1DF06C6900CC4E9A /* sierd.png */; };
-		EFB61AB61DF076B400CC4E9A /* arda_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AB31DF076B400CC4E9A /* arda_sound.mp3 */; };
-		EFB61AB71DF076B400CC4E9A /* boemkoekkoek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AB41DF076B400CC4E9A /* boemkoekkoek.mp3 */; };
-		EFB61AB81DF076B400CC4E9A /* goal_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AB51DF076B400CC4E9A /* goal_sound.mp3 */; };
+		EFB61AC21DF0ADDD00CC4E9A /* _call_by_mom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AB91DF0ADDD00CC4E9A /* _call_by_mom.mp3 */; };
+		EFB61AC31DF0ADDD00CC4E9A /* _copa_cabana.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ABA1DF0ADDD00CC4E9A /* _copa_cabana.mp3 */; };
+		EFB61AC41DF0ADDD00CC4E9A /* _goal_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ABB1DF0ADDD00CC4E9A /* _goal_1.mp3 */; };
+		EFB61AC51DF0ADDD00CC4E9A /* _goal_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ABC1DF0ADDD00CC4E9A /* _goal_2.mp3 */; };
+		EFB61AC61DF0ADDD00CC4E9A /* _goal_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ABD1DF0ADDD00CC4E9A /* _goal_3.mp3 */; };
+		EFB61AC71DF0ADDD00CC4E9A /* _goal_0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ABE1DF0ADDD00CC4E9A /* _goal_0.mp3 */; };
+		EFB61AC81DF0ADDD00CC4E9A /* _miss_0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ABF1DF0ADDD00CC4E9A /* _miss_0.mp3 */; };
+		EFB61AC91DF0ADDD00CC4E9A /* _yellow_card.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AC01DF0ADDD00CC4E9A /* _yellow_card.mp3 */; };
+		EFB61ACA1DF0ADDD00CC4E9A /* _zwaluw.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AC11DF0ADDD00CC4E9A /* _zwaluw.mp3 */; };
+		EFB61ACD1DF0AEB400CC4E9A /* card_red.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ACB1DF0AEB400CC4E9A /* card_red.png */; };
+		EFB61ACE1DF0AEB400CC4E9A /* card_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,12 +100,7 @@
 		EFA797DC1DF037740007D054 /* TeamSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamSelector.swift; path = CustomViews/TeamSelector.swift; sourceTree = "<group>"; };
 		EFA7984B1DF037A00007D054 /* ambient.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambient.mp3; path = Sounds/ambient.mp3; sourceTree = "<group>"; };
 		EFA7984C1DF037A00007D054 /* fluit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fluit.mp3; path = Sounds/fluit.mp3; sourceTree = "<group>"; };
-		EFA7984D1DF037A00007D054 /* goal_s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goal_s.mp3; path = Sounds/goal_s.mp3; sourceTree = "<group>"; };
-		EFA7984E1DF037A00007D054 /* goal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goal.mp3; path = Sounds/goal.mp3; sourceTree = "<group>"; };
-		EFA7984F1DF037A00007D054 /* goal2_s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goal2_s.mp3; path = Sounds/goal2_s.mp3; sourceTree = "<group>"; };
-		EFA798501DF037A00007D054 /* goal2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goal2.mp3; path = Sounds/goal2.mp3; sourceTree = "<group>"; };
-		EFA798511DF037A00007D054 /* nearmiss_s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = nearmiss_s.mp3; path = Sounds/nearmiss_s.mp3; sourceTree = "<group>"; };
-		EFA798521DF037A00007D054 /* nearmiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = nearmiss.mp3; path = Sounds/nearmiss.mp3; sourceTree = "<group>"; };
+		EFA798511DF037A00007D054 /* _miss_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _miss_1.mp3; path = Sounds/_miss_1.mp3; sourceTree = "<group>"; };
 		EFA7985F1DF03B8F0007D054 /* ara.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = ara.ico; path = Images/Countries/ara.ico; sourceTree = "<group>"; };
 		EFA798601DF03B8F0007D054 /* arg.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = arg.ico; path = Images/Countries/arg.ico; sourceTree = "<group>"; };
 		EFA798611DF03B8F0007D054 /* aus.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = aus.ico; path = Images/Countries/aus.ico; sourceTree = "<group>"; };
@@ -143,7 +140,6 @@
 		EFA798A51DF03B9F0007D054 /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = field.png; path = Images/Other/field.png; sourceTree = "<group>"; };
 		EFA798A61DF03B9F0007D054 /* fields.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields.png; path = Images/Other/fields.png; sourceTree = "<group>"; };
 		EFA798A71DF03B9F0007D054 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Images/Other/logo.png; sourceTree = "<group>"; };
-		EFA798AF1DF03BAB0007D054 /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card.png; path = Images/Events/card.png; sourceTree = "<group>"; };
 		EFA798B01DF03BAB0007D054 /* corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = corner.png; path = Images/Events/corner.png; sourceTree = "<group>"; };
 		EFA798B11DF03BAB0007D054 /* footbal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = footbal.png; path = Images/Events/footbal.png; sourceTree = "<group>"; };
 		EFA798B21DF03BAB0007D054 /* injury.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = injury.png; path = Images/Events/injury.png; sourceTree = "<group>"; };
@@ -159,9 +155,17 @@
 		EFA798CB1DF046590007D054 /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		EFA798CD1DF04E6A0007D054 /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		EFB61A7E1DF06C6900CC4E9A /* sierd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sierd.png; path = Images/Other/sierd.png; sourceTree = "<group>"; };
-		EFB61AB31DF076B400CC4E9A /* arda_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = arda_sound.mp3; path = Sounds/Sierd/arda_sound.mp3; sourceTree = "<group>"; };
-		EFB61AB41DF076B400CC4E9A /* boemkoekkoek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = boemkoekkoek.mp3; path = Sounds/Sierd/boemkoekkoek.mp3; sourceTree = "<group>"; };
-		EFB61AB51DF076B400CC4E9A /* goal_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goal_sound.mp3; path = Sounds/Sierd/goal_sound.mp3; sourceTree = "<group>"; };
+		EFB61AB91DF0ADDD00CC4E9A /* _call_by_mom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _call_by_mom.mp3; path = Sounds/Sierd/_call_by_mom.mp3; sourceTree = "<group>"; };
+		EFB61ABA1DF0ADDD00CC4E9A /* _copa_cabana.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _copa_cabana.mp3; path = Sounds/Sierd/_copa_cabana.mp3; sourceTree = "<group>"; };
+		EFB61ABB1DF0ADDD00CC4E9A /* _goal_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _goal_1.mp3; path = Sounds/Sierd/_goal_1.mp3; sourceTree = "<group>"; };
+		EFB61ABC1DF0ADDD00CC4E9A /* _goal_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _goal_2.mp3; path = Sounds/Sierd/_goal_2.mp3; sourceTree = "<group>"; };
+		EFB61ABD1DF0ADDD00CC4E9A /* _goal_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _goal_3.mp3; path = Sounds/Sierd/_goal_3.mp3; sourceTree = "<group>"; };
+		EFB61ABE1DF0ADDD00CC4E9A /* _goal_0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _goal_0.mp3; path = Sounds/Sierd/_goal_0.mp3; sourceTree = "<group>"; };
+		EFB61ABF1DF0ADDD00CC4E9A /* _miss_0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _miss_0.mp3; path = Sounds/Sierd/_miss_0.mp3; sourceTree = "<group>"; };
+		EFB61AC01DF0ADDD00CC4E9A /* _yellow_card.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _yellow_card.mp3; path = Sounds/Sierd/_yellow_card.mp3; sourceTree = "<group>"; };
+		EFB61AC11DF0ADDD00CC4E9A /* _zwaluw.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _zwaluw.mp3; path = Sounds/Sierd/_zwaluw.mp3; sourceTree = "<group>"; };
+		EFB61ACB1DF0AEB400CC4E9A /* card_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_red.png; path = Images/Events/card_red.png; sourceTree = "<group>"; };
+		EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_yellow.png; path = Images/Events/card_yellow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,12 +241,7 @@
 				EFB61A801DF074CC00CC4E9A /* Sierd */,
 				EFA7984B1DF037A00007D054 /* ambient.mp3 */,
 				EFA7984C1DF037A00007D054 /* fluit.mp3 */,
-				EFA7984D1DF037A00007D054 /* goal_s.mp3 */,
-				EFA7984E1DF037A00007D054 /* goal.mp3 */,
-				EFA7984F1DF037A00007D054 /* goal2_s.mp3 */,
-				EFA798501DF037A00007D054 /* goal2.mp3 */,
-				EFA798511DF037A00007D054 /* nearmiss_s.mp3 */,
-				EFA798521DF037A00007D054 /* nearmiss.mp3 */,
+				EFA798511DF037A00007D054 /* _miss_1.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -265,7 +264,8 @@
 		EFA7985C1DF03B700007D054 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				EFA798AF1DF03BAB0007D054 /* card.png */,
+				EFB61ACB1DF0AEB400CC4E9A /* card_red.png */,
+				EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */,
 				EFA798B01DF03BAB0007D054 /* corner.png */,
 				EFA798B11DF03BAB0007D054 /* footbal.png */,
 				EFA798B21DF03BAB0007D054 /* injury.png */,
@@ -331,9 +331,15 @@
 		EFB61A801DF074CC00CC4E9A /* Sierd */ = {
 			isa = PBXGroup;
 			children = (
-				EFB61AB31DF076B400CC4E9A /* arda_sound.mp3 */,
-				EFB61AB41DF076B400CC4E9A /* boemkoekkoek.mp3 */,
-				EFB61AB51DF076B400CC4E9A /* goal_sound.mp3 */,
+				EFB61AB91DF0ADDD00CC4E9A /* _call_by_mom.mp3 */,
+				EFB61ABA1DF0ADDD00CC4E9A /* _copa_cabana.mp3 */,
+				EFB61ABB1DF0ADDD00CC4E9A /* _goal_1.mp3 */,
+				EFB61ABC1DF0ADDD00CC4E9A /* _goal_2.mp3 */,
+				EFB61ABD1DF0ADDD00CC4E9A /* _goal_3.mp3 */,
+				EFB61ABE1DF0ADDD00CC4E9A /* _goal_0.mp3 */,
+				EFB61ABF1DF0ADDD00CC4E9A /* _miss_0.mp3 */,
+				EFB61AC01DF0ADDD00CC4E9A /* _yellow_card.mp3 */,
+				EFB61AC11DF0ADDD00CC4E9A /* _zwaluw.mp3 */,
 			);
 			name = Sierd;
 			sourceTree = "<group>";
@@ -401,17 +407,19 @@
 				EFA7989B1DF03B900007D054 /* nor.ico in Resources */,
 				EFA798AA1DF03B9F0007D054 /* Animals-Turtle-icon.png in Resources */,
 				EFA798861DF03B900007D054 /* cat.ico in Resources */,
-				EFB61AB61DF076B400CC4E9A /* arda_sound.mp3 in Resources */,
 				EFA7988B1DF03B900007D054 /* dui.ico in Resources */,
+				EFB61AC41DF0ADDD00CC4E9A /* _goal_1.mp3 in Resources */,
+				EFB61ACA1DF0ADDD00CC4E9A /* _zwaluw.mp3 in Resources */,
 				EFA798AD1DF03B9F0007D054 /* logo.png in Resources */,
 				EFA798811DF03B900007D054 /* ara.ico in Resources */,
 				EFA798B61DF03BAB0007D054 /* corner.png in Resources */,
 				EFA798A01DF03B900007D054 /* usa.ico in Resources */,
+				EFB61AC71DF0ADDD00CC4E9A /* _goal_0.mp3 in Resources */,
 				EFA798981DF03B900007D054 /* lib.ico in Resources */,
 				EFA797AF1DEF09910007D054 /* LaunchScreen.storyboard in Resources */,
 				EFA798B91DF03BAB0007D054 /* sub.png in Resources */,
-				EFB61AB81DF076B400CC4E9A /* goal_sound.mp3 in Resources */,
-				EFA798B51DF03BAB0007D054 /* card.png in Resources */,
+				EFB61ACD1DF0AEB400CC4E9A /* card_red.png in Resources */,
+				EFB61AC51DF0ADDD00CC4E9A /* _goal_2.mp3 in Resources */,
 				EFA7989E1DF03B900007D054 /* rus.ico in Resources */,
 				EFA798A11DF03B900007D054 /* ven.ico in Resources */,
 				EFA7988A1DF03B900007D054 /* dan.ico in Resources */,
@@ -420,30 +428,28 @@
 				EFA797AC1DEF09910007D054 /* Assets.xcassets in Resources */,
 				EFA798AB1DF03B9F0007D054 /* field.png in Resources */,
 				EFA798951DF03B900007D054 /* isl.ico in Resources */,
-				EFA798551DF037A00007D054 /* goal_s.mp3 in Resources */,
 				EFA798991DF03B900007D054 /* mex.ico in Resources */,
 				EFA798971DF03B900007D054 /* jap.ico in Resources */,
-				EFA798581DF037A00007D054 /* goal2.mp3 in Resources */,
 				EFA798CA1DF03BBC0007D054 /* Stopp.png in Resources */,
 				EFA7989D1DF03B900007D054 /* pol.ico in Resources */,
 				EFA798C31DF03BBC0007D054 /* gear-512.png in Resources */,
 				EFA798A91DF03B9F0007D054 /* Animals-Running-Rabbit-icon.png in Resources */,
+				EFB61AC61DF0ADDD00CC4E9A /* _goal_3.mp3 in Resources */,
 				EFA798841DF03B900007D054 /* bra.ico in Resources */,
 				EFA7988F1DF03B900007D054 /* ext.ico in Resources */,
-				EFA7985A1DF037A00007D054 /* nearmiss.mp3 in Resources */,
 				EFA798831DF03B900007D054 /* aus.ico in Resources */,
 				EFB61A7F1DF06C6900CC4E9A /* sierd.png in Resources */,
 				EFA798921DF03B900007D054 /* gre.ico in Resources */,
 				EFA798961DF03B900007D054 /* ita.ico in Resources */,
 				EFA798A21DF03B900007D054 /* zam.ico in Resources */,
 				EFA798881DF03B900007D054 /* chn.ico in Resources */,
+				EFB61AC21DF0ADDD00CC4E9A /* _call_by_mom.mp3 in Resources */,
 				EFA7988E1DF03B900007D054 /* esp.ico in Resources */,
-				EFA798571DF037A00007D054 /* goal2_s.mp3 in Resources */,
-				EFB61AB71DF076B400CC4E9A /* boemkoekkoek.mp3 in Resources */,
 				EFA798941DF03B900007D054 /* ire.ico in Resources */,
-				EFA798591DF037A00007D054 /* nearmiss_s.mp3 in Resources */,
+				EFA798591DF037A00007D054 /* _miss_1.mp3 in Resources */,
 				EFA798C51DF03BBC0007D054 /* Play.png in Resources */,
 				EFA798891DF03B900007D054 /* col.ico in Resources */,
+				EFB61AC81DF0ADDD00CC4E9A /* _miss_0.mp3 in Resources */,
 				EFA798C81DF03BBC0007D054 /* start.png in Resources */,
 				EFA798B71DF03BAB0007D054 /* footbal.png in Resources */,
 				EFA798541DF037A00007D054 /* fluit.mp3 in Resources */,
@@ -451,15 +457,17 @@
 				EFA798C71DF03BBC0007D054 /* sound.png in Resources */,
 				EFA798851DF03B900007D054 /* can.ico in Resources */,
 				EFA798531DF037A00007D054 /* ambient.mp3 in Resources */,
+				EFB61AC31DF0ADDD00CC4E9A /* _copa_cabana.mp3 in Resources */,
 				EFA798C61DF03BBC0007D054 /* settings.ico in Resources */,
 				EFA798931DF03B900007D054 /* gua.ico in Resources */,
 				EFA798911DF03B900007D054 /* fra.ico in Resources */,
 				EFA798B81DF03BAB0007D054 /* injury.png in Resources */,
 				EFA798901DF03B900007D054 /* fin.ico in Resources */,
+				EFB61AC91DF0ADDD00CC4E9A /* _yellow_card.mp3 in Resources */,
 				EFA7989A1DF03B900007D054 /* ned.ico in Resources */,
 				EFA798821DF03B900007D054 /* arg.ico in Resources */,
-				EFA798561DF037A00007D054 /* goal.mp3 in Resources */,
 				EFA798C41DF03BBC0007D054 /* Pause.png in Resources */,
+				EFB61ACE1DF0AEB400CC4E9A /* card_yellow.png in Resources */,
 				EFA7989C1DF03B900007D054 /* nzl.ico in Resources */,
 				EFA7988C1DF03B900007D054 /* egi.ico in Resources */,
 				EFA798871DF03B900007D054 /* chi.ico in Resources */,

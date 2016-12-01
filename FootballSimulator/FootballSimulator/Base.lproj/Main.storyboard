@@ -73,7 +73,7 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sierd.png" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-TF-apv">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sierd.png" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-TF-apv">
                                 <rect key="frame" x="292" y="161" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="0Mv-CX-O8q"/>
@@ -174,6 +174,7 @@
                         <outlet property="btnStart" destination="alS-kH-U1H" id="1RP-q8-Z2R"/>
                         <outlet property="selectorTeam1" destination="kwx-Fm-z6n" id="W7Y-CR-Bhv"/>
                         <outlet property="selectorTeam2" destination="7D6-Gg-CHh" id="zyI-Dc-6y4"/>
+                        <outlet property="sierd" destination="fKY-TF-apv" id="wRG-ix-tfg"/>
                         <segue destination="V6D-tm-sc4" kind="presentation" identifier="toSettingsSegue" modalTransitionStyle="flipHorizontal" id="eMw-DZ-Ohm"/>
                         <segue destination="lLy-nE-h86" kind="show" identifier="toSimulationSegue" id="D2p-MW-51f"/>
                     </connections>
