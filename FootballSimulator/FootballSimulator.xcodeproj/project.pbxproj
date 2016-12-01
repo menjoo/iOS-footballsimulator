@@ -63,7 +63,6 @@
 		EFA798AB1DF03B9F0007D054 /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798A51DF03B9F0007D054 /* field.png */; };
 		EFA798AC1DF03B9F0007D054 /* fields.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798A61DF03B9F0007D054 /* fields.png */; };
 		EFA798AD1DF03B9F0007D054 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798A71DF03B9F0007D054 /* logo.png */; };
-		EFA798AE1DF03B9F0007D054 /* VS-Icon-315x400.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798A81DF03B9F0007D054 /* VS-Icon-315x400.png */; };
 		EFA798B51DF03BAB0007D054 /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798AF1DF03BAB0007D054 /* card.png */; };
 		EFA798B61DF03BAB0007D054 /* corner.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798B01DF03BAB0007D054 /* corner.png */; };
 		EFA798B71DF03BAB0007D054 /* footbal.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798B11DF03BAB0007D054 /* footbal.png */; };
@@ -79,6 +78,10 @@
 		EFA798CA1DF03BBC0007D054 /* Stopp.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA798C21DF03BBC0007D054 /* Stopp.png */; };
 		EFA798CC1DF046590007D054 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA798CB1DF046590007D054 /* Simulator.swift */; };
 		EFA798CE1DF04E6A0007D054 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA798CD1DF04E6A0007D054 /* EventRow.swift */; };
+		EFB61A7F1DF06C6900CC4E9A /* sierd.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61A7E1DF06C6900CC4E9A /* sierd.png */; };
+		EFB61AB61DF076B400CC4E9A /* arda_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AB31DF076B400CC4E9A /* arda_sound.mp3 */; };
+		EFB61AB71DF076B400CC4E9A /* boemkoekkoek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AB41DF076B400CC4E9A /* boemkoekkoek.mp3 */; };
+		EFB61AB81DF076B400CC4E9A /* goal_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AB51DF076B400CC4E9A /* goal_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,7 +143,6 @@
 		EFA798A51DF03B9F0007D054 /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = field.png; path = Images/Other/field.png; sourceTree = "<group>"; };
 		EFA798A61DF03B9F0007D054 /* fields.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields.png; path = Images/Other/fields.png; sourceTree = "<group>"; };
 		EFA798A71DF03B9F0007D054 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Images/Other/logo.png; sourceTree = "<group>"; };
-		EFA798A81DF03B9F0007D054 /* VS-Icon-315x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VS-Icon-315x400.png"; path = "Images/Other/VS-Icon-315x400.png"; sourceTree = "<group>"; };
 		EFA798AF1DF03BAB0007D054 /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card.png; path = Images/Events/card.png; sourceTree = "<group>"; };
 		EFA798B01DF03BAB0007D054 /* corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = corner.png; path = Images/Events/corner.png; sourceTree = "<group>"; };
 		EFA798B11DF03BAB0007D054 /* footbal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = footbal.png; path = Images/Events/footbal.png; sourceTree = "<group>"; };
@@ -156,6 +158,10 @@
 		EFA798C21DF03BBC0007D054 /* Stopp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stopp.png; path = Images/Controls/Stopp.png; sourceTree = "<group>"; };
 		EFA798CB1DF046590007D054 /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		EFA798CD1DF04E6A0007D054 /* EventRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		EFB61A7E1DF06C6900CC4E9A /* sierd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sierd.png; path = Images/Other/sierd.png; sourceTree = "<group>"; };
+		EFB61AB31DF076B400CC4E9A /* arda_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = arda_sound.mp3; path = Sounds/Sierd/arda_sound.mp3; sourceTree = "<group>"; };
+		EFB61AB41DF076B400CC4E9A /* boemkoekkoek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = boemkoekkoek.mp3; path = Sounds/Sierd/boemkoekkoek.mp3; sourceTree = "<group>"; };
+		EFB61AB51DF076B400CC4E9A /* goal_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goal_sound.mp3; path = Sounds/Sierd/goal_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +234,7 @@
 		EFA7984A1DF037940007D054 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				EFB61A801DF074CC00CC4E9A /* Sierd */,
 				EFA7984B1DF037A00007D054 /* ambient.mp3 */,
 				EFA7984C1DF037A00007D054 /* fluit.mp3 */,
 				EFA7984D1DF037A00007D054 /* goal_s.mp3 */,
@@ -270,12 +277,12 @@
 		EFA7985D1DF03B760007D054 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				EFB61A7E1DF06C6900CC4E9A /* sierd.png */,
 				EFA798A31DF03B9F0007D054 /* Animals-Running-Rabbit-icon.png */,
 				EFA798A41DF03B9F0007D054 /* Animals-Turtle-icon.png */,
 				EFA798A51DF03B9F0007D054 /* field.png */,
 				EFA798A61DF03B9F0007D054 /* fields.png */,
 				EFA798A71DF03B9F0007D054 /* logo.png */,
-				EFA798A81DF03B9F0007D054 /* VS-Icon-315x400.png */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -319,6 +326,16 @@
 				EFA798801DF03B8F0007D054 /* zam.ico */,
 			);
 			name = Countries;
+			sourceTree = "<group>";
+		};
+		EFB61A801DF074CC00CC4E9A /* Sierd */ = {
+			isa = PBXGroup;
+			children = (
+				EFB61AB31DF076B400CC4E9A /* arda_sound.mp3 */,
+				EFB61AB41DF076B400CC4E9A /* boemkoekkoek.mp3 */,
+				EFB61AB51DF076B400CC4E9A /* goal_sound.mp3 */,
+			);
+			name = Sierd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,15 +401,16 @@
 				EFA7989B1DF03B900007D054 /* nor.ico in Resources */,
 				EFA798AA1DF03B9F0007D054 /* Animals-Turtle-icon.png in Resources */,
 				EFA798861DF03B900007D054 /* cat.ico in Resources */,
+				EFB61AB61DF076B400CC4E9A /* arda_sound.mp3 in Resources */,
 				EFA7988B1DF03B900007D054 /* dui.ico in Resources */,
 				EFA798AD1DF03B9F0007D054 /* logo.png in Resources */,
 				EFA798811DF03B900007D054 /* ara.ico in Resources */,
-				EFA798AE1DF03B9F0007D054 /* VS-Icon-315x400.png in Resources */,
 				EFA798B61DF03BAB0007D054 /* corner.png in Resources */,
 				EFA798A01DF03B900007D054 /* usa.ico in Resources */,
 				EFA798981DF03B900007D054 /* lib.ico in Resources */,
 				EFA797AF1DEF09910007D054 /* LaunchScreen.storyboard in Resources */,
 				EFA798B91DF03BAB0007D054 /* sub.png in Resources */,
+				EFB61AB81DF076B400CC4E9A /* goal_sound.mp3 in Resources */,
 				EFA798B51DF03BAB0007D054 /* card.png in Resources */,
 				EFA7989E1DF03B900007D054 /* rus.ico in Resources */,
 				EFA798A11DF03B900007D054 /* ven.ico in Resources */,
@@ -414,12 +432,14 @@
 				EFA7988F1DF03B900007D054 /* ext.ico in Resources */,
 				EFA7985A1DF037A00007D054 /* nearmiss.mp3 in Resources */,
 				EFA798831DF03B900007D054 /* aus.ico in Resources */,
+				EFB61A7F1DF06C6900CC4E9A /* sierd.png in Resources */,
 				EFA798921DF03B900007D054 /* gre.ico in Resources */,
 				EFA798961DF03B900007D054 /* ita.ico in Resources */,
 				EFA798A21DF03B900007D054 /* zam.ico in Resources */,
 				EFA798881DF03B900007D054 /* chn.ico in Resources */,
 				EFA7988E1DF03B900007D054 /* esp.ico in Resources */,
 				EFA798571DF037A00007D054 /* goal2_s.mp3 in Resources */,
+				EFB61AB71DF076B400CC4E9A /* boemkoekkoek.mp3 in Resources */,
 				EFA798941DF03B900007D054 /* ire.ico in Resources */,
 				EFA798591DF037A00007D054 /* nearmiss_s.mp3 in Resources */,
 				EFA798C51DF03BBC0007D054 /* Play.png in Resources */,
