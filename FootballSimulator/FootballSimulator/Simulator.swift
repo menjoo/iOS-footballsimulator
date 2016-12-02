@@ -55,7 +55,7 @@ open class Team {
         if playerno > 0 && self.players.count >= playerno {
           return self.players[playerno-1]
         }
-        return "unknown player"
+        return "No.\(playerno)"
     }
 }
 

@@ -25,6 +25,7 @@ class MainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Match"
         setupBtns()
         currentSierd = Int(arc4random()) % sierdSounds.count - 1
     }

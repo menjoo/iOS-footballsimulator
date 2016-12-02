@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SimulationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GameEventSource {
+class SimulationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GameEventSource, UIAlertViewDelegate {
 
     @IBOutlet weak var eventsTableView: UITableView!
     
@@ -48,6 +48,8 @@ class SimulationViewController: UIViewController, UITableViewDataSource, UITable
         self.eventsTableView.allowsSelection = true
         self.eventsTableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.game.delegate = self
+        
+        title = "Commentator: Sierd de Vos"
         
         scoreLabel.text = "0 - 0"
         statusLabel.text = "Not started"
@@ -177,14 +179,13 @@ class SimulationViewController: UIViewController, UITableViewDataSource, UITable
             } else if gameEvent == .nearmissTeam1 || gameEvent == .nearmissTeam2 {
                 playSound(sound: "_miss_\(arc4random() % 2)", isBackground: false)
             } else if gameEvent == .yellowCardTeam1 || gameEvent == .yellowCardTeam2 {
-                playSound(sound: "fluit", isBackground: false)
                 playSound(sound: "_yellow_card", isBackground: false)
             } else if gameEvent == .redCardTeam1 || gameEvent == .redCardTeam2 {
-                playSound(sound: "fluit", isBackground: false)
+                //
             } else if gameEvent == .timePass {
                 timeLabel.text = "\(time)'"
                 if time == 45 {
-                    playSound(sound: "fluit", isBackground: false, times: 2)
+                    playSound(sound: "fluit", isBackground: false)
                 }
                 
                 if(arc4random() % 90 == 0) {
@@ -224,10 +225,16 @@ class SimulationViewController: UIViewController, UITableViewDataSource, UITable
     
     func GameEnded(_ gameResult: GameResult) {
         stopSound()
-        playSound(sound: "fluit", isBackground: false, times: 3)
+        playSound(sound: "fluit", isBackground: false)
         playPauseBtn.isUserInteractionEnabled = false
         stopBtn.isUserInteractionEnabled = false
         soundBtn.isUserInteractionEnabled = false
+        
+        let alert = UIAlertController(title: "Match results", message: "\(gameResult)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: { (action) in
+            // NOOP
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func playSound(sound: String, isBackground: Bool, times: Int = 1) {
@@ -258,8 +265,10 @@ class SimulationViewController: UIViewController, UITableViewDataSource, UITable
     
     func stopSound() {
         soundPlayer?.stop()
+        soundPlayer = AVAudioPlayer()
         soundPlayer = nil
         soundPlayerBg?.stop()
+        soundPlayerBg = AVAudioPlayer()
         soundPlayerBg = nil
     }
 
