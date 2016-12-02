@@ -48,7 +48,10 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
         nameLabelTeam1.text = team1?.fullname.uppercased()
         flagIconTeam2.image = team2?.flag
         nameLabelTeam2.text = team2?.fullname.uppercased()
-        game.startGame(team1!, teamb: team2!, gameMode: .quick)
+        
+        let gameSpeed = UserDefaults.standard.integer(forKey: "gameSpeed")
+        
+        game.startGame(team1!, teamb: team2!, gameMode: SimulationMode(rawValue: gameSpeed)!)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

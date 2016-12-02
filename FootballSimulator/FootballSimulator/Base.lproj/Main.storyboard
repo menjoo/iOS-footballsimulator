@@ -386,6 +386,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="S1n-Y1-Nu5" firstAttribute="leading" secondItem="TWu-kW-dn8" secondAttribute="leadingMargin" constant="-20" id="2wq-66-kBx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S1n-Y1-Nu5" secondAttribute="trailing" constant="-20" id="8Ib-a4-wP9"/>
@@ -430,6 +431,7 @@
                                 <items>
                                     <navigationItem title="Settings" id="iec-Z1-Rpf">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="oXq-Lu-Dee">
+                                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="doneAction:" destination="V6D-tm-sc4" id="dEW-pH-biv"/>
                                             </connections>
@@ -437,16 +439,51 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxW-ba-idZ">
-                                <rect key="frame" x="161" y="358" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxW-ba-idZ">
+                                <rect key="frame" x="20" y="246" width="696" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="nfP-88-s1K">
+                                <rect key="frame" x="18" y="192" width="700" height="31"/>
+                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Animals-Turtle-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="PqW-bK-TfC">
+                                <rect key="frame" x="20" y="124" width="62" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="F23-jP-DYf"/>
+                                    <constraint firstAttribute="width" constant="62" id="bcp-xW-k35"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Animals-Running-Rabbit-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-su-DdB">
+                                <rect key="frame" x="654" y="135" width="62" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="g6q-ft-bMa"/>
+                                    <constraint firstAttribute="height" constant="54" id="imt-L8-eli"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nfP-88-s1K" firstAttribute="top" secondItem="PqW-bK-TfC" secondAttribute="bottom" constant="3" id="Aae-8x-C1x"/>
+                            <constraint firstItem="nfP-88-s1K" firstAttribute="top" secondItem="b3b-su-DdB" secondAttribute="bottom" constant="3" id="I2F-hL-k32"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nfP-88-s1K" secondAttribute="trailing" id="UNu-kb-ffr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mxW-ba-idZ" secondAttribute="leading" id="Ujm-Wl-WjZ"/>
+                            <constraint firstItem="mxW-ba-idZ" firstAttribute="top" secondItem="nfP-88-s1K" secondAttribute="bottom" constant="24" id="Xad-q6-buu"/>
+                            <constraint firstItem="nfP-88-s1K" firstAttribute="centerY" secondItem="3Md-BT-eAN" secondAttribute="centerY" id="c8U-JR-nWf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PqW-bK-TfC" secondAttribute="leading" id="cQJ-j5-BLq"/>
+                            <constraint firstItem="mxW-ba-idZ" firstAttribute="centerX" secondItem="3Md-BT-eAN" secondAttribute="centerX" id="cxz-42-0pH"/>
+                            <constraint firstItem="nfP-88-s1K" firstAttribute="centerX" secondItem="3Md-BT-eAN" secondAttribute="centerX" id="h2q-iZ-iTK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b3b-su-DdB" secondAttribute="trailing" id="mi9-ND-WUd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="nfP-88-s1K" secondAttribute="leading" id="rOl-aj-pvX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mxW-ba-idZ" secondAttribute="trailing" id="vYU-Au-OOi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="speedLabel" destination="mxW-ba-idZ" id="Zsp-yy-r3d"/>
+                        <outlet property="speedSlider" destination="nfP-88-s1K" id="xon-f1-GXz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zwc-EC-XZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -472,6 +509,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Animals-Running-Rabbit-icon.png" width="48" height="48"/>
+        <image name="Animals-Turtle-icon.png" width="512" height="512"/>
         <image name="bra.ico" width="128" height="128"/>
         <image name="field.png" width="496" height="331"/>
         <image name="fields.png" width="331" height="496"/>

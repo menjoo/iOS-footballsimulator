@@ -62,8 +62,8 @@ open class Team {
 
 public enum SimulationMode:Int {
     case realTime = 0
-    case normal
     case slow
+    case normal
     case quick
     case veryQuick
 }
