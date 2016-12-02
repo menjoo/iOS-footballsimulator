@@ -84,6 +84,7 @@
 		EFB61ACA1DF0ADDD00CC4E9A /* _zwaluw.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AC11DF0ADDD00CC4E9A /* _zwaluw.mp3 */; };
 		EFB61ACD1DF0AEB400CC4E9A /* card_red.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ACB1DF0AEB400CC4E9A /* card_red.png */; };
 		EFB61ACE1DF0AEB400CC4E9A /* card_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */; };
+		EFB61AD01DF1872C00CC4E9A /* TeamsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB61ACF1DF1872C00CC4E9A /* TeamsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		EFB61AC11DF0ADDD00CC4E9A /* _zwaluw.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = _zwaluw.mp3; path = Sounds/Sierd/_zwaluw.mp3; sourceTree = "<group>"; };
 		EFB61ACB1DF0AEB400CC4E9A /* card_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_red.png; path = Images/Events/card_red.png; sourceTree = "<group>"; };
 		EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_yellow.png; path = Images/Events/card_yellow.png; sourceTree = "<group>"; };
+		EFB61ACF1DF1872C00CC4E9A /* TeamsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				EFA797D21DEF6F800007D054 /* SettingsViewController.swift */,
 				EFA797D41DEF732D0007D054 /* SimulationViewController.swift */,
 				EFA798CD1DF04E6A0007D054 /* EventRow.swift */,
+				EFB61ACF1DF1872C00CC4E9A /* TeamsRepository.swift */,
 			);
 			path = FootballSimulator;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB61AD01DF1872C00CC4E9A /* TeamsRepository.swift in Sources */,
 				EFA798CE1DF04E6A0007D054 /* EventRow.swift in Sources */,
 				EFA797DD1DF037740007D054 /* MatchEventTableViewCell.swift in Sources */,
 				EFA797A71DEF09900007D054 /* MainController.swift in Sources */,

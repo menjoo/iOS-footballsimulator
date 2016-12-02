@@ -10,6 +10,7 @@ import UIKit
 
 class TeamSelector: UIScrollView, UIScrollViewDelegate {
     
+    var repository: TeamsRepository = TeamsRepository()
     var teams: [Team] = [Team]()
     var itemWidth: Int = 0
     var isLabelPositionTop: Bool = true
@@ -22,12 +23,7 @@ class TeamSelector: UIScrollView, UIScrollViewDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        populateTeams()
-    }
-    
-    func populateTeams() {
-        teams.append(Team(name: "ned", fullname: "NETHERLANDS", players: ["PLAYER 1", "PLAYER 2", "PLAYER 3"], strength: 15))
-        teams.append(Team(name: "bra", fullname: "BRASIL", players: ["PLAYER 1", "PLAYER 2", "PLAYER 3"], strength: 2))
+        teams = repository.getTeams()
     }
     
     override func layoutSubviews() {

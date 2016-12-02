@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SimulationViewController: UIViewController, UITableViewDataSource, GameEventSource {
+class SimulationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GameEventSource {
 
     @IBOutlet weak var eventsTableView: UITableView!
     
@@ -30,6 +30,7 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
     
     var game: Game = Game()
     var events: [EventRow] = [EventRow]()
+    var selectedIndex: Int = -1
     
     @IBOutlet weak var playPauseBtn: UIImageView!
     @IBOutlet weak var stopBtn: UIImageView!
@@ -43,7 +44,9 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
         super.viewDidLoad()
         setupButtons()
         self.eventsTableView.dataSource = self
-        self.eventsTableView.allowsSelection = false
+        self.eventsTableView.delegate = self
+        self.eventsTableView.allowsSelection = true
+        self.eventsTableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.game.delegate = self
         
         scoreLabel.text = "0 - 0"
@@ -92,39 +95,58 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt: IndexPath) {
+        if selectedIndex == didSelectRowAt.row {
+            selectedIndex = -1
+        } else {
+            selectedIndex = didSelectRowAt.row
+        }
+        
+        eventsTableView.beginUpdates()
+        eventsTableView.endUpdates()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == selectedIndex {
+            return 100.0
+        } else {
+            return 50.0
+        }
+    }
+    
     func eventDataFor(_ event: EventRow) -> (eventIcon: UIImage?, eventText: String, subtitleText: String) {
         if event.gameEvent == .cornerGivenTeam1 || event.gameEvent == .corderGivenTeam2 {
             return (eventIcon: UIImage(named: "corner.png"),
                     eventText: "Corner",
-                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is taking the kick")
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) is taking the kick")
         } else if event.gameEvent == .goalScoredTeam1 || event.gameEvent == .goalScoredTeam2 {
             return (eventIcon: UIImage(named: "footbal.png"),
                     eventText: "Goaaaaalll!!!",
-                    subtitleText: "Insane shot by \(playerNameFor(playerno: event.playerno, from: event.gameEvent))! A goal to remember!")
+                    subtitleText: "Insane shot by \(playerNameFor(playerno: event.playerno, from: event.gameEvent)!)! A goal to remember!")
         } else if event.gameEvent == .playerInjuredTeam1 || event.gameEvent == .playerInjuredTeam2 {
             return (eventIcon: UIImage(named: "injury.png"),
                     eventText: "Injury",
-                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is in serious pain!")
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) is in serious pain!")
         } else if event.gameEvent == .playerSwitchTeam1 || event.gameEvent == .playerSwitchTeam2 {
             return (eventIcon: UIImage(named: "sub.png"),
                     eventText: "Substitution",
-                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is being subbed")
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) is being subbed")
         } else if event.gameEvent == .yellowCardTeam1 || event.gameEvent == .yellowCardTeam2 {
             return (eventIcon: UIImage(named: "card_yellow.png"),
                     eventText: "Yellow card",
-                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) almost injured his opponent")
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) almost injured his opponent")
         } else if event.gameEvent == .redCardTeam1 || event.gameEvent == .redCardTeam2 {
             return (eventIcon: UIImage(named: "card_red.png"),
                     eventText: "Red card",
-                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) is off!  Took down his opponent who was clearly in on goal")
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) is off!  Took down his opponent who was clearly in on goal")
         } else if event.gameEvent == .violationTeam1 || event.gameEvent == .violationTeam2 {
             return (eventIcon: nil,
                     eventText: "Foul",
-                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)) with a reckless charge on his opponent! Yellow for him.")
+                    subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) with a reckless charge on his opponent! Yellow for him.")
         } else if event.gameEvent == .nearmissTeam1 || event.gameEvent == .nearmissTeam2 {
             return (eventIcon: nil,
                     eventText: "Miss",
-                    subtitleText: "Saved by the keeper! Kept position well and waited for \(playerNameFor(playerno: event.playerno, from: event.gameEvent))'s shot")
+                    subtitleText: "Saved by the keeper! Kept position well and waited for \(playerNameFor(playerno: event.playerno, from: event.gameEvent)!)'s shot")
         }
         
         return (eventIcon: nil, eventText: "", subtitleText: "")
@@ -172,6 +194,11 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
             
             if gameEvent == .goalScoredTeam1 || gameEvent == .goalScoredTeam2 {
                 playSound(sound: "_goal_\(arc4random() % 4)", isBackground: false)
+                
+                let notification = UILocalNotification()
+                notification.alertTitle = "Goal scored!"
+                notification.alertBody = "Score is \(score.goals1) - \(score.goals2), tap to see who scored"
+                UIApplication.shared.scheduleLocalNotification(notification)
             }
             
             if(gameEvent != .timePass) {
@@ -188,15 +215,19 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
         eventsTableView.beginUpdates()
         eventsTableView.insertRows(at: [newItemIndex], with: .fade)
         eventsTableView.endUpdates()
-        eventsTableView.scrollToRow(at: newItemIndex, at: UITableViewScrollPosition.bottom, animated: true)
+        
+        // Only scroll if no row expanded
+        if selectedIndex == -1 {
+            eventsTableView.scrollToRow(at: newItemIndex, at: UITableViewScrollPosition.bottom, animated: true)
+        }
     }
     
     func GameEnded(_ gameResult: GameResult) {
         stopSound()
         playSound(sound: "fluit", isBackground: false, times: 3)
-        playPauseBtn.isHidden = true
-        stopBtn.isHidden = true
-        soundBtn.isHidden = true
+        playPauseBtn.isUserInteractionEnabled = false
+        stopBtn.isUserInteractionEnabled = false
+        soundBtn.isUserInteractionEnabled = false
     }
     
     func playSound(sound: String, isBackground: Bool, times: Int = 1) {
