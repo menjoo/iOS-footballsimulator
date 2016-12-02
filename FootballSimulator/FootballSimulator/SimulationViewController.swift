@@ -31,11 +31,17 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
     var game: Game = Game()
     var events: [EventRow] = [EventRow]()
     
+    @IBOutlet weak var playPauseBtn: UIImageView!
+    @IBOutlet weak var stopBtn: UIImageView!
+    @IBOutlet weak var soundBtn: UIImageView!
+    
+    var shouldPlaySound: Bool = true
     var soundPlayerBg: AVAudioPlayer?
     var soundPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButtons()
         self.eventsTableView.dataSource = self
         self.eventsTableView.allowsSelection = false
         self.game.delegate = self
@@ -188,29 +194,34 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
     func GameEnded(_ gameResult: GameResult) {
         stopSound()
         playSound(sound: "fluit", isBackground: false, times: 3)
+        playPauseBtn.isHidden = true
+        stopBtn.isHidden = true
+        soundBtn.isHidden = true
     }
     
     func playSound(sound: String, isBackground: Bool, times: Int = 1) {
-        let loops = times - 1
-        let url = Bundle.main.url(forResource: sound, withExtension: "mp3")!
+        if shouldPlaySound {
+            let loops = times - 1
+            let url = Bundle.main.url(forResource: sound, withExtension: "mp3")!
         
-        do {
-            if isBackground {
-                soundPlayerBg = try AVAudioPlayer(contentsOf: url)
-                guard let soundPlayerBg = soundPlayerBg else { return }
-                soundPlayerBg.prepareToPlay()
-                soundPlayerBg.volume = 0.3
-                soundPlayerBg.play()
-            } else {
-                soundPlayer = try AVAudioPlayer(contentsOf: url)
-                guard let soundPlayer = soundPlayer else { return }
-                soundPlayer.prepareToPlay()
-                soundPlayer.volume = 1.0
-                soundPlayer.numberOfLoops = loops
-                soundPlayer.play()
+            do {
+                if isBackground {
+                    soundPlayerBg = try AVAudioPlayer(contentsOf: url)
+                    guard let soundPlayerBg = soundPlayerBg else { return }
+                    soundPlayerBg.prepareToPlay()
+                    soundPlayerBg.volume = 0.3
+                    soundPlayerBg.play()
+                } else {
+                    soundPlayer = try AVAudioPlayer(contentsOf: url)
+                    guard let soundPlayer = soundPlayer else { return }
+                    soundPlayer.prepareToPlay()
+                    soundPlayer.volume = 1.0
+                    soundPlayer.numberOfLoops = loops
+                    soundPlayer.play()
+                }
+            } catch let error {
+                print(error.localizedDescription)
             }
-        } catch let error {
-            print(error.localizedDescription)
         }
     }
     
@@ -221,4 +232,43 @@ class SimulationViewController: UIViewController, UITableViewDataSource, GameEve
         soundPlayerBg = nil
     }
 
+    func setupButtons() {
+        let tapPlayPauseGesture = UITapGestureRecognizer(target: self, action: #selector(self.playPauseTapped))
+        playPauseBtn.addGestureRecognizer(tapPlayPauseGesture)
+        
+        let stopGesture = UITapGestureRecognizer(target: self, action: #selector(self.stopTapped))
+        stopBtn.addGestureRecognizer(stopGesture)
+        
+        let tapSoundGesture = UITapGestureRecognizer(target: self, action: #selector(self.soundTapped))
+        soundBtn.addGestureRecognizer(tapSoundGesture)
+    }
+    
+    func playPauseTapped() {
+        // PauseGame method actually toggles the pauses/not paused state
+        game.PauseGame()
+        
+        if game.shouldPauze {
+            playPauseBtn.image = UIImage(named: "Play.png")
+        } else {
+            playPauseBtn.image = UIImage(named: "Pause.png")
+        }
+    }
+    
+    func stopTapped() {
+        // If game is paused EndGame wont work until its unpaused...
+        if game.shouldPauze {
+            game.PauseGame()
+        }
+        game.EndGame()
+    }
+    
+    func soundTapped() {
+        shouldPlaySound = !shouldPlaySound
+        
+        if !shouldPlaySound {
+            stopSound()
+        } else {
+            playSound(sound: "ambient", isBackground: true)
+        }
+    }
 }
