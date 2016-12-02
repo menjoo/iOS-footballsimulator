@@ -85,6 +85,8 @@
 		EFB61ACD1DF0AEB400CC4E9A /* card_red.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ACB1DF0AEB400CC4E9A /* card_red.png */; };
 		EFB61ACE1DF0AEB400CC4E9A /* card_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */; };
 		EFB61AD01DF1872C00CC4E9A /* TeamsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB61ACF1DF1872C00CC4E9A /* TeamsRepository.swift */; };
+		EFB61AD21DF1AB0200CC4E9A /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AD11DF1AB0200CC4E9A /* AppIcon.appiconset */; };
+		EFB61AD41DF1AE7300CC4E9A /* whistle.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB61AD31DF1AE7300CC4E9A /* whistle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +170,8 @@
 		EFB61ACB1DF0AEB400CC4E9A /* card_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_red.png; path = Images/Events/card_red.png; sourceTree = "<group>"; };
 		EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_yellow.png; path = Images/Events/card_yellow.png; sourceTree = "<group>"; };
 		EFB61ACF1DF1872C00CC4E9A /* TeamsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsRepository.swift; sourceTree = "<group>"; };
+		EFB61AD11DF1AB0200CC4E9A /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = Assets.xcassets/AppIcon.appiconset; sourceTree = "<group>"; };
+		EFB61AD31DF1AE7300CC4E9A /* whistle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whistle.png; path = Images/Events/whistle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,7 @@
 				EFA797A61DEF09900007D054 /* MainController.swift */,
 				EFA797A81DEF09910007D054 /* Main.storyboard */,
 				EFA797AB1DEF09910007D054 /* Assets.xcassets */,
+				EFB61AD11DF1AB0200CC4E9A /* AppIcon.appiconset */,
 				EFA797AD1DEF09910007D054 /* LaunchScreen.storyboard */,
 				EFA797B01DEF09910007D054 /* Info.plist */,
 				EFA797D21DEF6F800007D054 /* SettingsViewController.swift */,
@@ -267,6 +272,7 @@
 		EFA7985C1DF03B700007D054 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				EFB61AD31DF1AE7300CC4E9A /* whistle.png */,
 				EFB61ACB1DF0AEB400CC4E9A /* card_red.png */,
 				EFB61ACC1DF0AEB400CC4E9A /* card_yellow.png */,
 				EFA798B01DF03BAB0007D054 /* corner.png */,
@@ -409,6 +415,7 @@
 				EFA7989F1DF03B900007D054 /* swe.ico in Resources */,
 				EFA7989B1DF03B900007D054 /* nor.ico in Resources */,
 				EFA798AA1DF03B9F0007D054 /* Animals-Turtle-icon.png in Resources */,
+				EFB61AD41DF1AE7300CC4E9A /* whistle.png in Resources */,
 				EFA798861DF03B900007D054 /* cat.ico in Resources */,
 				EFA7988B1DF03B900007D054 /* dui.ico in Resources */,
 				EFB61AC41DF0ADDD00CC4E9A /* _goal_1.mp3 in Resources */,
@@ -424,6 +431,7 @@
 				EFB61ACD1DF0AEB400CC4E9A /* card_red.png in Resources */,
 				EFB61AC51DF0ADDD00CC4E9A /* _goal_2.mp3 in Resources */,
 				EFA7989E1DF03B900007D054 /* rus.ico in Resources */,
+				EFB61AD21DF1AB0200CC4E9A /* AppIcon.appiconset in Resources */,
 				EFA798A11DF03B900007D054 /* ven.ico in Resources */,
 				EFA7988A1DF03B900007D054 /* dan.ico in Resources */,
 				EFA798C91DF03BBC0007D054 /* Stop.png in Resources */,

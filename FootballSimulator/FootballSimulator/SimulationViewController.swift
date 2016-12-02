@@ -142,7 +142,7 @@ class SimulationViewController: UIViewController, UITableViewDataSource, UITable
                     eventText: "Red card",
                     subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) is off!  Took down his opponent who was clearly in on goal")
         } else if event.gameEvent == .violationTeam1 || event.gameEvent == .violationTeam2 {
-            return (eventIcon: nil,
+            return (eventIcon: UIImage(named: "whistle.png"),
                     eventText: "Foul",
                     subtitleText: "\(playerNameFor(playerno: event.playerno, from: event.gameEvent)!) with a reckless charge on his opponent! Yellow for him.")
         } else if event.gameEvent == .nearmissTeam1 || event.gameEvent == .nearmissTeam2 {

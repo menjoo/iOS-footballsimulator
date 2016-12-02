@@ -15,8 +15,8 @@ class TeamsRepository {
         let urlString = "https://bitbucket.org/mennomorsink/football-simulator-publics/raw/ca8e194dad8b394c26938f469668b80dfcb0fd86/teams.json"
         if let url = NSURL(string: urlString) {
             if let data = try? Data(contentsOf: url as URL) {
-                do {
-                    let parsedData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [AnyObject]
+                //do {
+                    let parsedData = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [AnyObject]
                     for item in parsedData {
                         let name = item["name"] as! String
                         let fullname = item["fullname"] as! String
@@ -25,10 +25,10 @@ class TeamsRepository {
                         let team = Team(name: name, fullname: fullname, players: players, strength: strength)
                         teams.append(team)
                     }
-                    print(parsedData)
-                } catch let error as NSError {
-                    print(error)
-                }
+//                    print(parsedData)
+//                } catch let error as NSError {
+//                    print(error)
+//                }
             }
         }
         return teams
